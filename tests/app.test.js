@@ -5,9 +5,13 @@
 // });
 
 import supertest from "supertest";
-import { app } from "../app.js";
+import { server } from "../app.js";
 
-const request = supertest(app);
+const request = supertest(server);
+afterAll(() => {
+  return server.close();
+});
+
 test("Ich teste mein Route", async () => {
   const respose = await request.get("/");
   expect(respose.statusCode).toBe(200);

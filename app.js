@@ -10,6 +10,6 @@ app.get("/", (req, res) => {
 //   return "Hallo leute";
 // }
 
-app.listen(9999, () => {
+export const server = app.listen(9999, () => {
   console.log("server leuft");
 });
