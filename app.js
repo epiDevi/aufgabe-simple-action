@@ -1,3 +1,3 @@
 export function sayHallo() {
-  return "Hallo leute";
+  return "Hallo bobo";
 }
